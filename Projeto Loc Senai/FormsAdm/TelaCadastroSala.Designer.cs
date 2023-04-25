@@ -41,6 +41,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.box_bloco = new System.Windows.Forms.TextBox();
             this.cadas_sala = new System.Windows.Forms.Button();
+            this.box_teste = new System.Windows.Forms.TextBox();
             this.PainelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quadro)).BeginInit();
             this.SuspendLayout();
@@ -201,11 +202,19 @@
             this.cadas_sala.UseVisualStyleBackColor = true;
             this.cadas_sala.Click += new System.EventHandler(this.cadas_sala_Click);
             // 
+            // box_teste
+            // 
+            this.box_teste.Location = new System.Drawing.Point(485, 195);
+            this.box_teste.Name = "box_teste";
+            this.box_teste.Size = new System.Drawing.Size(100, 20);
+            this.box_teste.TabIndex = 16;
+            // 
             // TelaCadastroSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 449);
+            this.Controls.Add(this.box_teste);
             this.Controls.Add(this.cadas_sala);
             this.Controls.Add(this.box_bloco);
             this.Controls.Add(this.label4);
@@ -243,5 +252,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox box_bloco;
         private System.Windows.Forms.Button cadas_sala;
+        private System.Windows.Forms.TextBox box_teste;
     }
 }

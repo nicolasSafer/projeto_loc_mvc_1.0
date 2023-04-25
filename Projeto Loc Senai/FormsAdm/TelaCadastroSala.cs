@@ -47,7 +47,7 @@ namespace Projeto_Loc_Senai.FormsAdm
         private void cadas_sala_Click(object sender, EventArgs e)
         {
             m_sala sl = new m_sala();
-            sl.setnome_sala(box_nome_sala);
+            sl.setnome_sala(box_teste);
             sl.setdescricao_sala(descricao_sala);
             sl.setnumeracao_sala(box_numeracao);
             sl.setbloco_sala(box_bloco);
