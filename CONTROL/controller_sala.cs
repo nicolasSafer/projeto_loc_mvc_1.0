@@ -36,25 +36,5 @@ namespace CONTROL
                 throw new System.Exception(ex.Message);
             }
         }
-
-        public void setbloco_sala(TextBox box_bloco)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void setdescricao_sala(TextBox descricao_sala)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void setnome_sala(TextBox box_nome_sala)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void setnumeracao_sala(TextBox box_numeracao)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
