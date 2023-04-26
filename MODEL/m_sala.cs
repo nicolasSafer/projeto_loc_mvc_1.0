@@ -25,6 +25,7 @@ namespace MODEL
 
 
         }
+
         public string Getnome_sala()
         {
             return this.nome_sala;
@@ -41,6 +42,7 @@ namespace MODEL
         {
             return this.numeracao_sala;
         }
+        //////////////////////////////
         public void setnome_sala(string nome_sala)
         {
             this.nome_sala = nome_sala;

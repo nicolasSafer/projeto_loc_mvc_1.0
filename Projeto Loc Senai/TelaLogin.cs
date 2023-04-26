@@ -11,6 +11,8 @@ using MODEL;
 using CONTROL;
 using System.Runtime.InteropServices;
 using System.Threading;
+using FontAwesome.Sharp;
+using WindowsFormsApp3;
 
 namespace Projeto_Loc_Senai
 {
@@ -19,7 +21,7 @@ namespace Projeto_Loc_Senai
         //Thread f1 ainda nao esta sendo usado para abrir tela adm, esperar nicolas fazer verificacao de senha para conseguir abrir tela adm
         //Thread f1;
         Thread f2;
-
+        conexao con = new conexao();
         public TelaLogin()
         {
             InitializeComponent();
@@ -99,6 +101,12 @@ namespace Projeto_Loc_Senai
         private void btnlogin_adm_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void teste_conectar_Click(object sender, EventArgs e)
+        {
+            if (con.conectar())
+                MessageBox.Show("Conexão bem sucedida");
         }
     }
 }

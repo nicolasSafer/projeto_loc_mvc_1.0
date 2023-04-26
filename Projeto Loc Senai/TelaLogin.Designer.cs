@@ -56,6 +56,7 @@
             this.btnlogin_vis = new System.Windows.Forms.Button();
             this.barrasuperioravis = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.teste_conectar = new System.Windows.Forms.Button();
             this.BarraSuperior1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Iconemap)).BeginInit();
             this.Loginadm.SuspendLayout();
@@ -176,6 +177,7 @@
             // 
             this.Loginadm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Loginadm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Loginadm.Controls.Add(this.teste_conectar);
             this.Loginadm.Controls.Add(this.senhaadm);
             this.Loginadm.Controls.Add(this.usuariodm);
             this.Loginadm.Controls.Add(this.panel3);
@@ -453,6 +455,16 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Visitante";
             // 
+            // teste_conectar
+            // 
+            this.teste_conectar.Location = new System.Drawing.Point(263, 114);
+            this.teste_conectar.Name = "teste_conectar";
+            this.teste_conectar.Size = new System.Drawing.Size(75, 23);
+            this.teste_conectar.TabIndex = 6;
+            this.teste_conectar.Text = "S I M";
+            this.teste_conectar.UseVisualStyleBackColor = true;
+            this.teste_conectar.Click += new System.EventHandler(this.teste_conectar_Click);
+            // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -521,5 +533,6 @@
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconPictureBox OlhoDesocultar;
         private FontAwesome.Sharp.IconPictureBox OlhoOcultar;
+        private System.Windows.Forms.Button teste_conectar;
     }
 }
