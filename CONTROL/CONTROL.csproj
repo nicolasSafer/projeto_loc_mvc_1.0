@@ -87,6 +87,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="conexao.cs" />
+    <Compile Include="ConsultarDados.cs" />
     <Compile Include="controller_login.cs" />
     <Compile Include="controller_sala.cs" />
     <Compile Include="GradientPanel.cs">

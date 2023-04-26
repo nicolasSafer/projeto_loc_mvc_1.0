@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.PainelSuperior = new CONTROL.GradientPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.quadro = new FontAwesome.Sharp.IconPictureBox();
-            this.Fechar = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.box_nome_sala = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,74 +37,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.box_bloco = new System.Windows.Forms.TextBox();
             this.cadas_sala = new System.Windows.Forms.Button();
-            this.box_teste = new System.Windows.Forms.TextBox();
+            this.PainelSuperior = new CONTROL.GradientPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.quadro = new FontAwesome.Sharp.IconPictureBox();
+            this.Fechar = new FontAwesome.Sharp.IconButton();
             this.PainelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quadro)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PainelSuperior
-            // 
-            this.PainelSuperior.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(105)))), ((int)(((byte)(157)))));
-            this.PainelSuperior.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(189)))));
-            this.PainelSuperior.Controls.Add(this.label6);
-            this.PainelSuperior.Controls.Add(this.quadro);
-            this.PainelSuperior.Controls.Add(this.Fechar);
-            this.PainelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PainelSuperior.Location = new System.Drawing.Point(0, 0);
-            this.PainelSuperior.Margin = new System.Windows.Forms.Padding(2);
-            this.PainelSuperior.Name = "PainelSuperior";
-            this.PainelSuperior.Size = new System.Drawing.Size(662, 162);
-            this.PainelSuperior.TabIndex = 0;
-            this.PainelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PainelSuperior_MouseDown);
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(244, 20);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(233, 110);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Cadastro \r\n de Sala\r\n";
-            // 
-            // quadro
-            // 
-            this.quadro.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.quadro.BackColor = System.Drawing.Color.Transparent;
-            this.quadro.IconChar = FontAwesome.Sharp.IconChar.ChalkboardTeacher;
-            this.quadro.IconColor = System.Drawing.Color.White;
-            this.quadro.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.quadro.IconSize = 112;
-            this.quadro.Location = new System.Drawing.Point(135, 20);
-            this.quadro.Margin = new System.Windows.Forms.Padding(2);
-            this.quadro.Name = "quadro";
-            this.quadro.Size = new System.Drawing.Size(112, 122);
-            this.quadro.TabIndex = 7;
-            this.quadro.TabStop = false;
-            // 
-            // Fechar
-            // 
-            this.Fechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Fechar.BackColor = System.Drawing.Color.Transparent;
-            this.Fechar.FlatAppearance.BorderSize = 0;
-            this.Fechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(189)))));
-            this.Fechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(189)))));
-            this.Fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Fechar.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.Fechar.IconColor = System.Drawing.Color.White;
-            this.Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Fechar.IconSize = 25;
-            this.Fechar.Location = new System.Drawing.Point(619, 16);
-            this.Fechar.Margin = new System.Windows.Forms.Padding(2);
-            this.Fechar.Name = "Fechar";
-            this.Fechar.Size = new System.Drawing.Size(22, 24);
-            this.Fechar.TabIndex = 6;
-            this.Fechar.UseVisualStyleBackColor = false;
-            this.Fechar.Click += new System.EventHandler(this.Fechar_Click);
             // 
             // label1
             // 
@@ -202,19 +137,75 @@
             this.cadas_sala.UseVisualStyleBackColor = true;
             this.cadas_sala.Click += new System.EventHandler(this.cadas_sala_Click);
             // 
-            // box_teste
+            // PainelSuperior
             // 
-            this.box_teste.Location = new System.Drawing.Point(485, 195);
-            this.box_teste.Name = "box_teste";
-            this.box_teste.Size = new System.Drawing.Size(100, 20);
-            this.box_teste.TabIndex = 16;
+            this.PainelSuperior.ColorBottom = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(105)))), ((int)(((byte)(157)))));
+            this.PainelSuperior.ColorTop = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(189)))));
+            this.PainelSuperior.Controls.Add(this.label6);
+            this.PainelSuperior.Controls.Add(this.quadro);
+            this.PainelSuperior.Controls.Add(this.Fechar);
+            this.PainelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PainelSuperior.Location = new System.Drawing.Point(0, 0);
+            this.PainelSuperior.Margin = new System.Windows.Forms.Padding(2);
+            this.PainelSuperior.Name = "PainelSuperior";
+            this.PainelSuperior.Size = new System.Drawing.Size(662, 162);
+            this.PainelSuperior.TabIndex = 0;
+            this.PainelSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PainelSuperior_MouseDown);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(244, 20);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(233, 110);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Cadastro \r\n de Sala\r\n";
+            // 
+            // quadro
+            // 
+            this.quadro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.quadro.BackColor = System.Drawing.Color.Transparent;
+            this.quadro.IconChar = FontAwesome.Sharp.IconChar.ChalkboardTeacher;
+            this.quadro.IconColor = System.Drawing.Color.White;
+            this.quadro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.quadro.IconSize = 112;
+            this.quadro.Location = new System.Drawing.Point(135, 20);
+            this.quadro.Margin = new System.Windows.Forms.Padding(2);
+            this.quadro.Name = "quadro";
+            this.quadro.Size = new System.Drawing.Size(112, 122);
+            this.quadro.TabIndex = 7;
+            this.quadro.TabStop = false;
+            // 
+            // Fechar
+            // 
+            this.Fechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Fechar.BackColor = System.Drawing.Color.Transparent;
+            this.Fechar.FlatAppearance.BorderSize = 0;
+            this.Fechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(189)))));
+            this.Fechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(189)))));
+            this.Fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Fechar.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.Fechar.IconColor = System.Drawing.Color.White;
+            this.Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Fechar.IconSize = 25;
+            this.Fechar.Location = new System.Drawing.Point(619, 16);
+            this.Fechar.Margin = new System.Windows.Forms.Padding(2);
+            this.Fechar.Name = "Fechar";
+            this.Fechar.Size = new System.Drawing.Size(22, 24);
+            this.Fechar.TabIndex = 6;
+            this.Fechar.UseVisualStyleBackColor = false;
+            this.Fechar.Click += new System.EventHandler(this.Fechar_Click);
             // 
             // TelaCadastroSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 449);
-            this.Controls.Add(this.box_teste);
             this.Controls.Add(this.cadas_sala);
             this.Controls.Add(this.box_bloco);
             this.Controls.Add(this.label4);
@@ -252,6 +243,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox box_bloco;
         private System.Windows.Forms.Button cadas_sala;
-        private System.Windows.Forms.TextBox box_teste;
     }
 }

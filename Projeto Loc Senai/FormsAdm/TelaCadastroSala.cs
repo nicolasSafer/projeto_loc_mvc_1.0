@@ -48,17 +48,22 @@ namespace Projeto_Loc_Senai.FormsAdm
         {
             m_sala sl = new m_sala();
 
-            sl.setnome_sala(box_teste.Text);
+            sl.setnome_sala(box_nome_sala.Text);
             sl.setdescricao_sala(descricao_sala.Text);
             sl.setnumeracao_sala(box_numeracao.Text);
             sl.setbloco_sala(box_bloco.Text);
                                
 
             controller_sala cs = new controller_sala();
-            //if (cs.insertsala(sl) == true)
-            //    MessageBox.Show("Foi");
-            //else
-            //    MessageBox.Show("N foi");
+            if (cs.insertsala(sl) == true )
+            {
+                MessageBox.Show("foi");
+            }
+            else
+            {
+                MessageBox.Show("Não foi");
+            }
+
         }
     }
 }

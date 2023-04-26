@@ -13,15 +13,16 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using FontAwesome.Sharp;
 using WindowsFormsApp3;
+using System.Windows.Controls;
 
 namespace Projeto_Loc_Senai
 {
     public partial class TelaLogin : Form
     {
-        //Thread f1 ainda nao esta sendo usado para abrir tela adm, esperar nicolas fazer verificacao de senha para conseguir abrir tela adm
-        //Thread f1;
+        Thread f1;
         Thread f2;
         conexao con = new conexao();
+        User us = new User();
         public TelaLogin()
         {
             InitializeComponent();
@@ -83,6 +84,11 @@ namespace Projeto_Loc_Senai
             OlhoDesocultar.BringToFront();
             txtsenha_adm.PasswordChar = '•';
         }
+        //Fechar a Tela Login e Abrir Visitante
+        private void AbrirJan(object obj)
+        {
+            Application.Run(new TelaAdm());
+        }
 
         //Fechar a Tela Login e Abrir Visitante
         private void AbrirJan2(object obj)
@@ -100,7 +106,26 @@ namespace Projeto_Loc_Senai
 
         private void btnlogin_adm_Click(object sender, EventArgs e)
         {
+            
+            controller_login cl = new controller_login();
 
+            us.setsenha(txtsenha_adm.Text);
+            us.setuser(txtusuario_adm.Text);
+
+            bool logado = cl.login(us);
+            if (logado == true)
+            {
+                this.Close();
+                f1 = new Thread(AbrirJan);
+                f1.SetApartmentState(ApartmentState.STA);
+                f1.Start();
+            }
+            else
+            {
+                MessageBox.Show("minha pica 2");
+
+            }
+            
         }
 
         private void teste_conectar_Click(object sender, EventArgs e)
