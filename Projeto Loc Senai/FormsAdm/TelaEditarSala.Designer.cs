@@ -42,6 +42,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cadas_sala = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.PainelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quadro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtSala)).BeginInit();
@@ -216,11 +218,34 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Nome sala";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(549, 407);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "label5";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(607, 418);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 41);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Editar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TelaEditarSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 490);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.cadas_sala);
             this.Controls.Add(this.box_bloco);
             this.Controls.Add(this.label4);
@@ -262,5 +287,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button cadas_sala;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
     }
 }

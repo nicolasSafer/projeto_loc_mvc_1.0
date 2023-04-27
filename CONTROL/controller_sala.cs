@@ -1,6 +1,8 @@
 ﻿using MODEL;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,6 +60,36 @@ namespace CONTROL
                 throw ex;
 
             }
+        }
+        bool selectok = false;
+        int cont = 0;
+        public bool selectasala(m_sala sl)
+        {
+            try
+            {
+                ConsultarDados consu = new ConsultarDados();
+                MySqlDataReader dr = consu.select("select * from tb_sala_do_predio ");
+
+                while (dr.Read())
+                {
+                    cont++;
+                }
+                if (cont == 0)
+                {
+                    selectok = false;
+                }
+                else
+                {
+                    selectok = true;
+                }
+
+            }
+            catch
+            {
+                selectok = false;
+            }
+
+            return selectok;
         }
 
     }

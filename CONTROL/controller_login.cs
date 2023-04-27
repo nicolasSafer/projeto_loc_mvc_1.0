@@ -24,9 +24,7 @@ namespace CONTROL
             try
             {
                 ConsultarDados consu = new ConsultarDados();
-                MySqlDataReader dt = consu.select("select * from tb_funcionario where usuario_funcionario = '" +
-                                                        us.Getuser() + "' and senha_funcionario = '" +
-                                                        us.Getsenha() + "'");
+                MySqlDataReader dt = consu.select("select * from tb_funcionario where usuario_funcionario = '" + us.Getuser() + "' and senha_funcionario = '" + us.Getsenha() + "'");
                 while (dt.Read())
                 {
                     cont++;

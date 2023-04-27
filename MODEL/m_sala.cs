@@ -31,7 +31,7 @@ namespace MODEL
             get { return id_sala; }
             set { id_sala = value; }
         }
-       
+        
         public string Getnome_sala()
         {
             return this.nome_sala;

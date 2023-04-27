@@ -1,4 +1,6 @@
 ﻿using MODEL;
+using CONTROL;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,26 +11,38 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp3;
+using System.Threading;
 
 namespace Projeto_Loc_Senai.FormsAdm
 {
     public partial class TelaSala : Form
     {
+        
         public TelaSala()
         {
             InitializeComponent();
         }
-
+        Thread f1;
         private void btnAdd_Click(object sender, EventArgs e)
         {
             TelaCadastroSala f1 = new TelaCadastroSala();
             f1.ShowDialog();
         }
-
+        private void AbrirJan(object obj)
+        {
+            Application.Run(new TelaEditarSala(teste));
+        }
+        public string teste = null;
         private void BtnAttSala_Click(object sender, EventArgs e)
         {
-            TelaEditarSala f2 = new TelaEditarSala();
-            f2.ShowDialog();
+
+            teste = box_pesquisa.Text;
+            MessageBox.Show(teste);
+
+            this.Close();
+            f1 = new Thread(AbrirJan);
+            f1.SetApartmentState(ApartmentState.STA);
+            f1.Start(teste);
         }
 
         private void TelaSala_Load(object sender, EventArgs e)
@@ -36,6 +50,18 @@ namespace Projeto_Loc_Senai.FormsAdm
             conexao conn = new conexao();
             dtSala.DataSource = conn.ObterDados("SELECT * FROM tb_sala_do_predio");
             //clicar na linha pegar a info do campo id - armazenar em uma variavel - colocar no botão editar troca de tela e levar a variavel e fazer um selecta la com essa variavel
+        }
+        int indexRow;
+        private void dtSala_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex < 0) { return; }
+            else    
+            {
+               indexRow = e.RowIndex;
+                DataGridViewRow row = dtSala.Rows[indexRow];
+                box_pesquisa.Text = row.Cells[0].Value.ToString();
+                
+            }
         }
     }
 }

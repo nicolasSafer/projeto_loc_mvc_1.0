@@ -17,10 +17,12 @@ namespace Projeto_Loc_Senai.FormsAdm
 {
     public partial class TelaEditarSala : Form
     {
-        
-        public TelaEditarSala()
+        public string teste;
+        public TelaEditarSala(string id)
         {
+            teste = id;
             InitializeComponent();
+            label5.Text = teste;
             //Desativa barra superior padrão do Windows
             this.Text = string.Empty;
             this.ControlBox = false;
@@ -68,9 +70,13 @@ namespace Projeto_Loc_Senai.FormsAdm
         private void TelaEditarSala_Load(object sender, EventArgs e)
         {
             conexao conn = new conexao();
-            dtSala.DataSource = conn.ObterDados("SELECT * FROM tb_sala_do_predio");
+            dtSala.DataSource = conn.ObterDados("SELECT * FROM tb_sala_do_predio where id_sala = @teste");
+
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(teste);
+        }
     }
 }
