@@ -63,5 +63,28 @@ namespace Projeto_Loc_Senai.FormsAdm
                 
             }
         }
+
+        private void dtSala_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            m_sala sala = new m_sala();
+            sala.codigosala = Convert.ToInt32(box_pesquisa.Text);
+            controller_sala control = new controller_sala();
+            bool resp = control.ExcluiSala(sala);
+            if(resp)
+            {
+                MessageBox.Show("registro excluido com sucesso");
+                conexao conn = new conexao();
+                dtSala.DataSource = conn.ObterDados("SELECT * FROM tb_sala_do_predio");
+            }
+            else
+            {
+                MessageBox.Show("falha ao tentar excluir o registro");
+            }
+        }
     }
 }

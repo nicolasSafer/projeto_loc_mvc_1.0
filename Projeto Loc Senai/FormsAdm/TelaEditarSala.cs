@@ -50,21 +50,21 @@ namespace Projeto_Loc_Senai.FormsAdm
        
         private void cadas_sala_Click(object sender, EventArgs e)
         {
-            
-            //m_sala sl = new m_sala();
-            //sl.setnome_sala(box_nome_sala.Text);
-            //sl.setnumeracao_sala(box_numeracao.Text);
-            //sl.setbloco_sala(descricao_sala.Text);
-            //sl.setdescricao_sala(box_bloco.Text);
-            //controller_sala cs = new controller_sala();
-            //if (cs.updatesala(sl)== true)
-            //{
-            //    MessageBox.Show("Deu boa");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Não deu boa");
-            //}
+
+            m_sala sl = new m_sala();
+            sl.setnome_sala(box_nome_sala.Text);
+            sl.setnumeracao_sala(box_numeracao.Text);
+            sl.setbloco_sala(descricao_sala.Text);
+            sl.setdescricao_sala(box_bloco.Text);
+            controller_sala cs = new controller_sala();
+            if (cs.updatesala(sl) == true)
+            {
+                MessageBox.Show("Deu boa");
+            }
+            else
+            {
+                MessageBox.Show("Não deu boa");
+            }
         }
 
         private void TelaEditarSala_Load(object sender, EventArgs e)

@@ -15,13 +15,17 @@ namespace CONTROL
     {
         bool resultado = false;
         conexao con = new conexao();
+        string sql;
+        
+        
+
 
         public bool insertsala(m_sala SL)
         {
             try
             {
                 //"insert into tb_sala_do_predio(nome_sala,descricao_sala,numeracao,bloco) values (@nome_sala,@descricao_sala,@numeracao,@bloco)"
-                string sql = "insert into tb_sala_do_predio(nome_sala,descricao_sala,numeracao,bloco) values (@nome_sala,@descricao_sala,@numeracao,@bloco)";
+                sql = "insert into tb_sala_do_predio(nome_sala,descricao_sala,numeracao,bloco) values (@nome_sala,@descricao_sala,@numeracao,@bloco)";
                 string[] campos = { "@nome_sala", "@descricao_sala", "@numeracao", "@bloco" };
                 string[] valores = { SL.Getnome_sala(), SL.Getdescricao_sala(), SL.Getbloco_sala(), SL.Getnumeracao_sala()};
                 if (con.cadastrar(campos, valores, sql) >= 1)
@@ -43,7 +47,7 @@ namespace CONTROL
             try
             {
                 //UPDATE tb_sala_do_predio set nome_sala = @nome_sala, descricao_sala = @descricao_sala, numeracao = @numeracao, bloco = @bloco WHERE tb_sala_do_predio.id_sala = @id_on
-                string sql = "UPDATE tb_sala_do_predio set nome_sala = @nome_sala, descricao_sala = @descricao_sala, numeracao = @numeracao, bloco = @bloco where id_sala=@codigo";
+                sql = "UPDATE tb_sala_do_predio set nome_sala = @nome_sala, descricao_sala = @descricao_sala, numeracao = @numeracao, bloco = @bloco where id_sala=@codigo";
                 string[] campos = { "@nome_sala", "@descricao_sala", "@numeracao", "@bloco" };//falta o id_sala
                 string[] valores = { sl.Getnome_sala(), sl.Getdescricao_sala(), sl.Getbloco_sala(), sl.Getnumeracao_sala() };
                 if (con.atualizarDados(sl.codigosala, campos, valores, sql) >= 1)
@@ -60,6 +64,20 @@ namespace CONTROL
                 throw ex;
 
             }
+        }
+        public bool ExcluiSala(m_sala sala)
+        {
+            sql = "delete from tb_sala_do_predio where id_sala = @codigo";
+            try
+            {
+                con.apagar(sala.codigosala,sql);
+                resultado= true;
+            }
+            catch
+            {
+                resultado= false;
+            }
+            return resultado;
         }
         bool selectok = false;
         int cont = 0;

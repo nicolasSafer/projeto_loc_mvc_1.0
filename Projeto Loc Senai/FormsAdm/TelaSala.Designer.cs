@@ -125,6 +125,7 @@
             this.dtSala.Size = new System.Drawing.Size(739, 427);
             this.dtSala.TabIndex = 22;
             this.dtSala.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtSala_CellClick);
+            this.dtSala.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtSala_CellContentClick);
             // 
             // iconButton2
             // 
@@ -148,6 +149,7 @@
             this.iconButton2.Text = "  Excluir";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // BtnAttSala
             // 
