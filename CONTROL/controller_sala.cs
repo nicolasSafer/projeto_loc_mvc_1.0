@@ -41,10 +41,10 @@ namespace CONTROL
             try
             {
                 //UPDATE tb_sala_do_predio set nome_sala = @nome_sala, descricao_sala = @descricao_sala, numeracao = @numeracao, bloco = @bloco WHERE tb_sala_do_predio.id_sala = @id_on
-                string sql = "UPDATE tb_sala_do_predio set nome_sala = @nome_sala, descricao_sala = @descricao_sala, numeracao = @numeracao, bloco = @bloco where id_sala=@id_sala";
+                string sql = "UPDATE tb_sala_do_predio set nome_sala = @nome_sala, descricao_sala = @descricao_sala, numeracao = @numeracao, bloco = @bloco where id_sala=@codigo";
                 string[] campos = { "@nome_sala", "@descricao_sala", "@numeracao", "@bloco" };//falta o id_sala
                 string[] valores = { sl.Getnome_sala(), sl.Getdescricao_sala(), sl.Getbloco_sala(), sl.Getnumeracao_sala() };
-                if (con.atualizarDados(sl.Codigosala, campos, valores, sql) >= 1)//criar o codigo sala no model
+                if (con.atualizarDados(sl.codigosala, campos, valores, sql) >= 1)
                 {
                     return resultado = true;
                 }

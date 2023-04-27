@@ -30,7 +30,9 @@
         {
             this.PainelSuperior = new CONTROL.GradientPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.quadro = new FontAwesome.Sharp.IconPictureBox();
+            this.Fechar = new FontAwesome.Sharp.IconButton();
+            this.dtSala = new System.Windows.Forms.DataGridView();
             this.box_nome_sala = new System.Windows.Forms.TextBox();
             this.descricao_sala = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,12 +41,10 @@
             this.box_bloco = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cadas_sala = new System.Windows.Forms.Button();
-            this.quadro = new FontAwesome.Sharp.IconPictureBox();
-            this.Fechar = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.PainelSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quadro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtSala)).BeginInit();
             this.SuspendLayout();
             // 
             // PainelSuperior
@@ -66,27 +66,62 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(300, 20);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(237, 116);
+            this.label6.Size = new System.Drawing.Size(223, 110);
             this.label6.TabIndex = 8;
             this.label6.Text = "Atualizar \r\n   Sala\r\n";
             // 
-            // dataGridView1
+            // quadro
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.quadro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.quadro.BackColor = System.Drawing.Color.Transparent;
+            this.quadro.IconChar = FontAwesome.Sharp.IconChar.ChalkboardTeacher;
+            this.quadro.IconColor = System.Drawing.Color.White;
+            this.quadro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.quadro.IconSize = 112;
+            this.quadro.Location = new System.Drawing.Point(184, 20);
+            this.quadro.Margin = new System.Windows.Forms.Padding(2);
+            this.quadro.Name = "quadro";
+            this.quadro.Size = new System.Drawing.Size(112, 122);
+            this.quadro.TabIndex = 7;
+            this.quadro.TabStop = false;
+            // 
+            // Fechar
+            // 
+            this.Fechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Fechar.BackColor = System.Drawing.Color.Transparent;
+            this.Fechar.FlatAppearance.BorderSize = 0;
+            this.Fechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(189)))));
+            this.Fechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(189)))));
+            this.Fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Fechar.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.Fechar.IconColor = System.Drawing.Color.White;
+            this.Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Fechar.IconSize = 25;
+            this.Fechar.Location = new System.Drawing.Point(694, 16);
+            this.Fechar.Margin = new System.Windows.Forms.Padding(2);
+            this.Fechar.Name = "Fechar";
+            this.Fechar.Size = new System.Drawing.Size(22, 24);
+            this.Fechar.TabIndex = 6;
+            this.Fechar.UseVisualStyleBackColor = false;
+            this.Fechar.Click += new System.EventHandler(this.Fechar_Click);
+            // 
+            // dtSala
+            // 
+            this.dtSala.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 179);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(698, 102);
-            this.dataGridView1.TabIndex = 2;
+            this.dtSala.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtSala.Location = new System.Drawing.Point(19, 179);
+            this.dtSala.Margin = new System.Windows.Forms.Padding(2);
+            this.dtSala.Name = "dtSala";
+            this.dtSala.RowHeadersWidth = 51;
+            this.dtSala.RowTemplate.Height = 24;
+            this.dtSala.Size = new System.Drawing.Size(698, 102);
+            this.dtSala.TabIndex = 2;
             // 
             // box_nome_sala
             // 
@@ -167,42 +202,8 @@
             this.cadas_sala.TabIndex = 17;
             this.cadas_sala.Text = "Editar";
             this.cadas_sala.UseVisualStyleBackColor = true;
+            this.cadas_sala.Click += new System.EventHandler(this.cadas_sala_Click);
             this.cadas_sala.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cadas_sala_MouseDown);
-            // 
-            // quadro
-            // 
-            this.quadro.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.quadro.BackColor = System.Drawing.Color.Transparent;
-            this.quadro.IconChar = FontAwesome.Sharp.IconChar.ChalkboardTeacher;
-            this.quadro.IconColor = System.Drawing.Color.White;
-            this.quadro.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.quadro.IconSize = 112;
-            this.quadro.Location = new System.Drawing.Point(184, 20);
-            this.quadro.Margin = new System.Windows.Forms.Padding(2);
-            this.quadro.Name = "quadro";
-            this.quadro.Size = new System.Drawing.Size(112, 122);
-            this.quadro.TabIndex = 7;
-            this.quadro.TabStop = false;
-            // 
-            // Fechar
-            // 
-            this.Fechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Fechar.BackColor = System.Drawing.Color.Transparent;
-            this.Fechar.FlatAppearance.BorderSize = 0;
-            this.Fechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(189)))));
-            this.Fechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(140)))), ((int)(((byte)(189)))));
-            this.Fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Fechar.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.Fechar.IconColor = System.Drawing.Color.White;
-            this.Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Fechar.IconSize = 25;
-            this.Fechar.Location = new System.Drawing.Point(694, 16);
-            this.Fechar.Margin = new System.Windows.Forms.Padding(2);
-            this.Fechar.Name = "Fechar";
-            this.Fechar.Size = new System.Drawing.Size(22, 24);
-            this.Fechar.TabIndex = 6;
-            this.Fechar.UseVisualStyleBackColor = false;
-            this.Fechar.Click += new System.EventHandler(this.Fechar_Click);
             // 
             // label1
             // 
@@ -229,16 +230,17 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.box_nome_sala);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtSala);
             this.Controls.Add(this.PainelSuperior);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TelaEditarSala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaEditarSala";
+            this.Load += new System.EventHandler(this.TelaEditarSala_Load);
             this.PainelSuperior.ResumeLayout(false);
             this.PainelSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quadro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtSala)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,7 +252,7 @@
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconPictureBox quadro;
         private FontAwesome.Sharp.IconButton Fechar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtSala;
         private System.Windows.Forms.TextBox box_nome_sala;
         private System.Windows.Forms.TextBox descricao_sala;
         private System.Windows.Forms.Label label2;

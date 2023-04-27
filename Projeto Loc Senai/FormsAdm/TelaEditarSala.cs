@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CONTROL;
+using MODEL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -6,13 +8,16 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp3;
 
 namespace Projeto_Loc_Senai.FormsAdm
 {
     public partial class TelaEditarSala : Form
     {
+        
         public TelaEditarSala()
         {
             InitializeComponent();
@@ -40,5 +45,32 @@ namespace Projeto_Loc_Senai.FormsAdm
         {
             this.Close();
         }
+       
+        private void cadas_sala_Click(object sender, EventArgs e)
+        {
+            
+            //m_sala sl = new m_sala();
+            //sl.setnome_sala(box_nome_sala.Text);
+            //sl.setnumeracao_sala(box_numeracao.Text);
+            //sl.setbloco_sala(descricao_sala.Text);
+            //sl.setdescricao_sala(box_bloco.Text);
+            //controller_sala cs = new controller_sala();
+            //if (cs.updatesala(sl)== true)
+            //{
+            //    MessageBox.Show("Deu boa");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Não deu boa");
+            //}
+        }
+
+        private void TelaEditarSala_Load(object sender, EventArgs e)
+        {
+            conexao conn = new conexao();
+            dtSala.DataSource = conn.ObterDados("SELECT * FROM tb_sala_do_predio");
+        }
+
+       
     }
 }
