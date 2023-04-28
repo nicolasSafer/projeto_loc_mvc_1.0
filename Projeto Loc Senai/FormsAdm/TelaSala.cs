@@ -35,14 +35,21 @@ namespace Projeto_Loc_Senai.FormsAdm
         public string teste = null;
         private void BtnAttSala_Click(object sender, EventArgs e)
         {
+            if(box_pesquisa.Text == "" )
+            {
 
-            teste = box_pesquisa.Text;
-            MessageBox.Show(teste);
-
+                MessageBox.Show("selecione");
+            }
+            else
+            {
+                teste = box_pesquisa.Text;
+                MessageBox.Show(teste);
+                f1 = new Thread(AbrirJan);
+                f1.SetApartmentState(ApartmentState.STA);
+                f1.Start(teste);
+                
+            }
             
-            f1 = new Thread(AbrirJan);
-            f1.SetApartmentState(ApartmentState.STA);
-            f1.Start(teste);
         }
 
         private void TelaSala_Load(object sender, EventArgs e)
@@ -52,6 +59,7 @@ namespace Projeto_Loc_Senai.FormsAdm
             //clicar na linha pegar a info do campo id - armazenar em uma variavel - colocar no botão editar troca de tela e levar a variavel e fazer um selecta la com essa variavel
         }
         int indexRow;
+        int pergunta;
         private void dtSala_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.RowIndex < 0) { return; }
