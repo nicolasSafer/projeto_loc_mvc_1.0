@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CONTROL;
+using MODEL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +41,25 @@ namespace Projeto_Loc_Senai.FormsAdm
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void cadas_sala_Click(object sender, EventArgs e)
+        {
+            m_evento evento = new m_evento();
+            evento.nome = txt_nome.Text;
+            evento.local = txt_local.Text;
+            evento.data = txt_data.Text;
+            evento.horario= txt_horario.Text;
+            evento.descricao= txt_descricao.Text;
+            ControllEventos ctr_evento= new ControllEventos();
+            if (ctr_evento.cadastrar(evento) == true)
+            {
+                MessageBox.Show("foi");
+            }
+            else
+            {
+                MessageBox.Show("Não foi");
+            }
         }
     }
 }
