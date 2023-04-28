@@ -46,7 +46,7 @@ namespace CONTROL
         {
             try
             {
-                string sql = "UPDATE tb_sala_do_predio set nome_sala = @nome_sala, descricao_sala = @descricao_sala, numeracao = @numeracao, bloco = @bloco where id_sala=@codigo";
+                sql = "UPDATE tb_sala_do_predio set nome_sala = @nome_sala, descricao_sala = @descricao_sala, numeracao = @numeracao, bloco = @bloco where id_sala=@codigo";
                 string[] campos = { "@nome_sala", "@descricao_sala", "@numeracao", "@bloco" };//falta o id_sala
                 string[] valores = { ums.Getnome_sala(), ums.Getdescricao_sala(), ums.Getnumeracao_sala(), ums.Getbloco_sala() };
                 if (con.atualizarDados(ums.codigosala, campos, valores, sql) >= 1)

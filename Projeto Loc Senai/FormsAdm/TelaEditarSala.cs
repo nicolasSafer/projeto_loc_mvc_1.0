@@ -69,10 +69,10 @@ namespace Projeto_Loc_Senai.FormsAdm
 
             
             DataGridViewRow row = dtSala.Rows[indexRow];
-            box_nome_sala.Text = row.Cells[0].Value.ToString();
-            descricao_sala.Text = row.Cells[1].Value.ToString();
-            box_numeracao.Text = row.Cells[2].Value.ToString();
-            box_bloco.Text = row.Cells[3].Value.ToString();
+            box_nome_sala.Text = row.Cells[1].Value.ToString();
+            descricao_sala.Text = row.Cells[2].Value.ToString();
+            box_numeracao.Text = row.Cells[3].Value.ToString();
+            box_bloco.Text = row.Cells[4].Value.ToString();
             //MessageBox.Show(dt.GetString(0));
 
         }
@@ -87,6 +87,7 @@ namespace Projeto_Loc_Senai.FormsAdm
             try
             {
                 m_sala ums = new m_sala();
+                ums.codigosala = Convert.ToInt32(teste);
 
                 ums.setnome_sala(box_nome_sala.Text);
                 ums.setnumeracao_sala(box_numeracao.Text);

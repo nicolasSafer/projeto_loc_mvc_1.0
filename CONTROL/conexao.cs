@@ -103,7 +103,7 @@ namespace WindowsFormsApp3
                 {
                     cmd.Parameters.AddWithValue(campos[i], valores[i]);
                 }
-                cmd.Parameters.AddWithValue("@codigo", codigo);
+                cmd.Parameters.AddWithValue("@codigo",codigo);
                 registro = cmd.ExecuteNonQuery();
                 conn.Close();
                 return registro;
