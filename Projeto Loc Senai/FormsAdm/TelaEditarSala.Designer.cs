@@ -40,7 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.box_bloco = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cadas_sala = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -194,19 +193,6 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "Bloco";
             // 
-            // cadas_sala
-            // 
-            this.cadas_sala.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cadas_sala.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cadas_sala.Location = new System.Drawing.Point(330, 418);
-            this.cadas_sala.Name = "cadas_sala";
-            this.cadas_sala.Size = new System.Drawing.Size(98, 41);
-            this.cadas_sala.TabIndex = 17;
-            this.cadas_sala.Text = "Editar";
-            this.cadas_sala.UseVisualStyleBackColor = true;
-            this.cadas_sala.Click += new System.EventHandler(this.cadas_sala_Click);
-            this.cadas_sala.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cadas_sala_MouseDown);
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -229,15 +215,14 @@
             // 
             // button1
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(607, 418);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(330, 418);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 41);
             this.button1.TabIndex = 19;
             this.button1.Text = "Editar";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // TelaEditarSala
             // 
@@ -246,7 +231,6 @@
             this.ClientSize = new System.Drawing.Size(736, 490);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cadas_sala);
             this.Controls.Add(this.box_bloco);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.box_numeracao);
@@ -285,7 +269,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox box_bloco;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button cadas_sala;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;

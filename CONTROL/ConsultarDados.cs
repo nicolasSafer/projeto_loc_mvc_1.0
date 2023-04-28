@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 
 namespace CONTROL
 {
-    internal class ConsultarDados: conexao
+    public class ConsultarDados: conexao
     {
         MySqlCommand cmd = null;
         MySqlDataReader dr = null;

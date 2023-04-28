@@ -9,7 +9,7 @@ namespace MODEL
     public class m_sala
     {
         //"insert into tb_sala_do_predio(nome_sala,descricao_sala,numeracao,bloco) values " + " (@nome_sala,@descricao_sala,@numeracao,@bloco)"
-        int id_sala;
+        public int id_sala;
         string nome_sala;
         string descricao_sala;
         string numeracao_sala;
@@ -17,7 +17,7 @@ namespace MODEL
 
         public m_sala()
         {
-            //construindo o metodo com as varaiveis vazias
+
             id_sala = 0;
             numeracao_sala = "";
             bloco_sala = "";

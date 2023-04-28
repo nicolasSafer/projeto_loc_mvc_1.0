@@ -39,7 +39,7 @@ namespace Projeto_Loc_Senai.FormsAdm
             teste = box_pesquisa.Text;
             MessageBox.Show(teste);
 
-            this.Close();
+            
             f1 = new Thread(AbrirJan);
             f1.SetApartmentState(ApartmentState.STA);
             f1.Start(teste);
@@ -94,6 +94,17 @@ namespace Projeto_Loc_Senai.FormsAdm
                 MessageBox.Show("insira o id da sala que deseja excluir na barra de pesquisa");
             }
             
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            ConsultarDados consu = new ConsultarDados();
+            MySqlDataReader dt = consu.select("SELECT * FROM tb_sala_do_predio ");
+
+            DataTable dataTable = new DataTable();
+            dataTable.Load(dt);
+
+            dtSala.DataSource = dataTable;
         }
     }
 }

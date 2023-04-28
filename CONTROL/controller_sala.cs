@@ -42,15 +42,14 @@ namespace CONTROL
                 throw new System.Exception(ex.Message);
             }
         }
-        public bool updatesala(m_sala sl)
+        public bool updatesala(m_sala ums)
         {
             try
             {
-                //UPDATE tb_sala_do_predio set nome_sala = @nome_sala, descricao_sala = @descricao_sala, numeracao = @numeracao, bloco = @bloco WHERE tb_sala_do_predio.id_sala = @id_on
-                sql = "UPDATE tb_sala_do_predio set nome_sala = @nome_sala, descricao_sala = @descricao_sala, numeracao = @numeracao, bloco = @bloco where id_sala=@codigo";
+                string sql = "UPDATE tb_sala_do_predio set nome_sala = @nome_sala, descricao_sala = @descricao_sala, numeracao = @numeracao, bloco = @bloco where id_sala=@codigo";
                 string[] campos = { "@nome_sala", "@descricao_sala", "@numeracao", "@bloco" };//falta o id_sala
-                string[] valores = { sl.Getnome_sala(), sl.Getdescricao_sala(), sl.Getbloco_sala(), sl.Getnumeracao_sala() };
-                if (con.atualizarDados(sl.codigosala, campos, valores, sql) >= 1)
+                string[] valores = { ums.Getnome_sala(), ums.Getdescricao_sala(), ums.Getnumeracao_sala(), ums.Getbloco_sala() };
+                if (con.atualizarDados(ums.codigosala, campos, valores, sql) >= 1)
                 {
                     return resultado = true;
                 }

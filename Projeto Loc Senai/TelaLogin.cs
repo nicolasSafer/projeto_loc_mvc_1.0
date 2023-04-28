@@ -122,7 +122,7 @@ namespace Projeto_Loc_Senai
             }
             else
             {
-                MessageBox.Show("minha pica 2");
+                MessageBox.Show("Login ou Senha incorreto");
 
             }
             
